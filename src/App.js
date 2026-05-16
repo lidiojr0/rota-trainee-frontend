@@ -1,7 +1,15 @@
+import React from 'react';
+import NavBar from './components/NavBar';
+
 function App() {
   return (
     <div>
-      <h1>Mindemy - Iniciando o Front-End!</h1>
+      <NavBar />
+      
+      {/* Colocar o resto do conteúdo das páginas*/}
+      <main style={{ padding: '20px' }}>
+        <h1>Plataforma</h1>
+      </main>
     </div>
   );
 }
