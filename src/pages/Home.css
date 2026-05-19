@@ -1,0 +1,182 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: rgba(254, 233, 243, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0 60px 300px;
+  position: relative; 
+  overflow: hidden; 
+  min-height: 650px;
+}
+
+.hero-content {
+  max-width: 550px;
+  z-index: 2; 
+  position: relative;
+}
+
+.hero-title {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 42px; 
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(89.2deg, #F851A2 11.05%, #EC82B5 99.52%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px; 
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: rgba(135, 21, 76, 1);
+  margin-bottom: 35px;
+}
+
+/* Search Bar */
+.hero-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 450px; 
+}
+
+.hero-search-icon {
+  position: absolute;
+  left: 15px;
+  width: 16px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.6; 
+}
+
+.hero-search input {
+  width: 100%;
+  padding: 12px 20px 12px 40px; 
+  border: 1px solid rgba(135, 21, 76, 0.4); 
+  border-radius: 30px;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: rgba(103, 16, 58, 1);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.hero-search input:focus {
+  border-color: rgba(135, 21, 76, 1); 
+}
+
+.hero-search input::placeholder {
+  color: rgba(135, 21, 76, 0.6);
+}
+
+/* Hero Image */
+.hero-image-container {
+  width: 27%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute; 
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1; 
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: right center;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%);
+}
+
+/* Divider */
+.divider-bar {
+  width: 100%;
+  height: 45px;
+  background-color: var(--cor-fundo-navbar);
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  background-color: rgba(103, 16, 58, 1);
+  border-radius: 8px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  z-index: 9998; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); 
+}
+
+.cookie-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cookie-icon {
+  width: 24px;
+  height: auto;
+}
+
+.cookie-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: white;
+  margin: 0;
+}
+
+.cookie-content a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cookie {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cookie:hover {
+  opacity: 0.8;
+}
+
+.btn-reject {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-ok {
+  background-color: white;
+  color: rgba(103, 16, 58, 1);
+  border: 1px solid white;
+}

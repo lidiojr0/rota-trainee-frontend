@@ -10,10 +10,9 @@ function Login() {
   return (
     <div className="auth-page">
       
-      {/* Cabeçalho */}
+      {/* Header */}
       <div className="auth-header">
         <img src={logoImg} alt="Mindemy Logo" className="auth-logo" />
-        
         <button 
           className="toggle-auth-btn"
           onClick={() => setAuthMode(authMode === 'login' ? 'register' : 'login')}
@@ -22,25 +21,24 @@ function Login() {
         </button>
       </div>
 
+      {/* Main Content */}
       <div className="auth-container">
         
-        {/* Título */}
         <h1 className="gradient-text">
           {authMode === 'login' && 'Login'}
           {authMode === 'register' && 'Invista no seu sucesso!'}
           {authMode === 'forgot' && 'Redefina sua senha'}
         </h1>
         
-        {/* Subtítulo */}
         <p className="auth-subtitle">
           {authMode === 'login' && 'Digite o endereço de e-mail e a senha da sua conta Mindemy.'}
           {authMode === 'register' && 'Crie sua conta agora e tenha acesso a cursos exclusivos, desenvolvidos por especialistas, para você dominar as habilidades mais requisitadas do mercado. Invista no seu futuro e aprenda no seu ritmo, com conteúdo de qualidade e atualizado. Não perca tempo, o futuro da tecnologia espera por você!'}
           {authMode === 'forgot' && 'Digite o endereço de e-mail que você usa na Mindemy para enviarmos um link de redefinição de senha.'}
         </p>
 
+        {/* Form */}
         <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
           
-          {/* Campos exclusivos do Cadastro */}
           {authMode === 'register' && (
             <>
               <div className="input-group">
@@ -54,13 +52,11 @@ function Login() {
             </>
           )}
 
-          {/* Campo de E-mail (vai aparecer em todas as telas) */}
           <div className="input-group">
             <label>Endereço de e-mail</label>
             <input type="email" />
           </div>
 
-          {/* Campo de Senha (vai aparecer no Login e no Cadastro, mas não no Forgot) */}
           {authMode !== 'forgot' && (
             <div className="input-group senha-group">
               <label>Senha</label>
@@ -76,7 +72,6 @@ function Login() {
             </div>
           )}
 
-          {/* Confirmação de Senha (só no Cadastro) */}
           {authMode === 'register' && (
             <div className="input-group senha-group">
               <label>Confirmação de Senha</label>
@@ -92,7 +87,6 @@ function Login() {
             </div>
           )}
 
-          {/* Link de Esqueci a Senha */}
           {authMode === 'login' && (
             <a 
               href="#" 
@@ -106,7 +100,7 @@ function Login() {
             </a>
           )}
 
-          {/* Botões de Ação */}
+          {/* Actions */}
           <div className="auth-actions">
             <button className="btn-primary" type="submit">
               {authMode === 'login' && 'Entrar'}
@@ -114,7 +108,6 @@ function Login() {
               {authMode === 'forgot' && 'Enviar'}
             </button>
             
-            {/* o botão de cancelar aparece no Cadastro e na Redefinição, e volta para o Login */}
             {authMode !== 'login' && (
               <button 
                 className="btn-cancel" 
@@ -127,7 +120,6 @@ function Login() {
           </div>
         </form>
         
-        {/* rodapé que só tem no Login */}
         {authMode === 'login' && <p className="auth-footer-text">Precisa de ajuda para entrar?</p>}
 
       </div>

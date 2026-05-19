@@ -5,14 +5,10 @@ import logoFooterImg from '../assets/logo-footer.svg';
 function Footer() {
   return (
     <footer className="footer-container">
-      
       <div className="footer-content">
-        
-        {/* Linha*/}
         <hr className="footer-line" />
 
         <div className="footer-bottom">
-          {/* Lado Esquerdo: Links */}
           <div className="footer-links">
             <a href="#">Mindemy</a>
             <a href="#">Ensine na Mindemy</a>
@@ -21,12 +17,10 @@ function Footer() {
             <a href="#">Fale conosco</a>
           </div>
 
-          {/* Lado Direito: Logo */}
           <div className="footer-logo">
             <img src={logoFooterImg} alt="Mindemy - Invista no seu sucesso" />
           </div>
         </div>
-
       </div>
     </footer>
   );

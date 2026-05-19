@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import ChatButton from './components/ChatButton'; 
 import Home from './pages/Home';
 import Login from './pages/Login';
 
 function AppContent() {
   const location = useLocation();
-  
   const isLoginPage = location.pathname === '/login';
 
   return (
@@ -24,6 +24,8 @@ function AppContent() {
       </main>
 
       {!isLoginPage && <Footer />}
+
+      <ChatButton />
       
     </div>
   );
