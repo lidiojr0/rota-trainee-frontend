@@ -8,10 +8,27 @@
   padding: 0 25px;
   background-color: var(--cor-fundo-navbar);
   height: 80px;
+  transition: transform 0.3s ease-in-out;
 
   position: sticky;
   top: 0;
   z-index: 9999;
+}
+
+@media (min-width: 851px) {
+  .navbar.navbar-hidden {
+    transform: translateY(-100%);
+  }
+  .navbar.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    background-color: var(--cor-fundo-navbar);
+  }
 }
 
 /* --- Left Section --- */

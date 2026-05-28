@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NavBar.css';
 
 // --- Assets Desktop ---
@@ -15,6 +15,7 @@ import iconeX from '../assets/icone-x.svg';
 
 function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -26,9 +27,29 @@ function NavBar() {
     }
   };
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${!isVisible ? 'navbar-hidden' : ''} ${isVisible ? 'navbar-fixed' : ''}`}>
         
         {/* === LEFT SECTION === */}
         <div className="nav-left">

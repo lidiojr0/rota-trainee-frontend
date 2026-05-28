@@ -83,7 +83,7 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 15px; 
+  gap: 15px;
 }
 
 /* Inputs */
@@ -167,8 +167,8 @@
 .btn-primary {
   background-color: var(--cor-destaque-rosa);
   color: var(--cor-texto-claro);
-  width: 125px; 
-  height: 38px; 
+  width: 125px;
+  height: 38px;
   font-size: 16px;
   border-radius: 5px;
   border: none;
@@ -184,11 +184,128 @@
 .btn-cancel {
   background: transparent;
   color: var(--cor-destaque-rosa);
-  width: 125px; 
-  height: 38px; 
-  font-size: 16px; 
+  width: 125px;
+  height: 38px;
+  font-size: 16px;
   border-radius: 5px;
   border: none;
   font-family: 'Open Sans', sans-serif;
   cursor: pointer;
+}
+
+/* ==========================================================================
+   MOBILE STRUCTURE & RESPONSIVIDADE (LOGIN)
+   ========================================================================== */
+
+@media (max-width: 850px) {
+
+  /* Respiro da página */
+  .auth-page {
+    padding: 20px 20px 80px 20px !important;
+    /* Adicionado 80px no fundo para o botão não ficar por cima de nada */
+    position: relative !important;
+    /* Necessário para prender o botão no fundo */
+  }
+
+  .auth-header {
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0px 0px 0px 50px !important;
+  }
+
+  .auth-logo {
+    height: 65px !important;
+    /* Aumentamos de 35px para 42px para dar mais destaque */
+  }
+
+  .toggle-auth-btn {
+    position: absolute !important;
+    bottom: 30px !important;
+    /* Distância do fundo do ecrã */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* Garante a centralização perfeita */
+    font-size: 14px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* --- 1. Título (Gradient) --- */
+  .gradient-text {
+    font-size: 48px !important;
+    line-height: 50.5px !important;
+    letter-spacing: -2.88px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* --- 2. Subtítulo --- */
+  .auth-subtitle {
+    font-size: 16px !important;
+    line-height: 24.96px !important;
+    letter-spacing: -0.48px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* --- 3. Formulário e Campos --- */
+  .auth-form {
+    padding: 25px 20px !important;
+    gap: 15px !important;
+    /* Espaçamento padrão que adicionei para os inputs não colarem */
+  }
+
+  /* Centraliza e trava a largura dos grupos de input */
+  .input-group {
+    width: 100% !important;
+    max-width: 298px !important;
+    margin: 0 auto !important;
+  }
+
+  .input-group input {
+    height: 50px !important;
+    /* Exatos 49.99px do Figma */
+    border-radius: 5px !important;
+    /* Reduzido dos 12px do Desktop */
+    padding: 0 15px !important;
+    /* O height assume o controle, zera o padding vertical */
+  }
+
+  /* Ajusta o ícone do olho na senha para centralizar com a nova altura */
+  .eye-icon {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  /* --- 4. Botões e Ações --- */
+  /* Empilha os botões (coluna) para acomodar os 298px de largura */
+  .auth-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+  }
+
+  .btn-primary,
+  .btn-cancel {
+    width: 100% !important;
+    max-width: 298px !important;
+    /* Largura exata do Figma */
+    height: 40px !important;
+    /* Altura exata do Figma */
+    border-radius: 5px !important;
+    /* Borda ajustada do Figma */
+    font-size: 16px !important;
+  }
+
+  .forgot-password {
+    width: 100% !important;
+    max-width: 298px !important;
+    /* Trava na mesma largura exata dos inputs */
+    margin: 5px auto 0 auto !important;
+    /* Mantém a caixa alinhada com os inputs */
+    text-align: left !important;
+    /* Empurra o texto para a borda esquerda da caixa */
+    display: block !important;
+  }
 }
