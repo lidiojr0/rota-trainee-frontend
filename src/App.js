@@ -1,42 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import ChatButton from './components/ChatButton'; 
 import Home from './pages/Home';
 import Login from './pages/Login';
-
-function AppContent() {
-  const location = useLocation();
-  const isLoginPage = location.pathname === '/login';
-
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      
-      {!isLoginPage && <NavBar />}
-      
-      <main style={{ flex: 1 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </main>
-
-      {!isLoginPage && <Footer />}
-
-      <ChatButton />
-      
-    </div>
-  );
-}
+import CursoWeb from './pages/CursoWeb';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
-  );
+  // Lê o que está escrito na URL do navegador
+  const caminho = window.location.pathname;
+
+  // Renderiza a tela baseada na URL
+  if (caminho === '/login') {
+    return <Login />;
+  }
+
+  if (caminho === '/curso') {
+    return <CursoWeb />;
+  }
+
+  // Se a URL for apenas '/' (ou qualquer outra coisa que não exista), mostra a Home
+  return <Home />;
 }
 
 export default App;

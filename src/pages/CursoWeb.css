@@ -1,0 +1,483 @@
+/* PAGE: CURSO */
+
+.curso-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(254, 233, 243, 1)
+}
+
+/* HERO */
+.curso-hero {
+  background-color: rgba(101, 54, 84, 1);
+  width: 100%;
+  height: 500px;
+  padding: 60px 0;
+  padding-top: 160px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: none; 
+  position: relative;
+}
+
+/* faixa superior */
+.curso-hero::before {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+}
+
+/* Container */
+.curso-hero-container {
+    max-width: 1350px;
+    width: 100%;
+    padding: 0 40px;
+    position: relative;
+    display: flex;
+}
+
+/* Conteúdo (lado esquerdo) */
+.curso-info {
+    width: 60%;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    gap: px;
+}
+
+.curso-titulo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.56;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.curso-subtitulo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: -0.03em;
+    margin: 10px 0 10px 0;
+}
+
+.curso-dados-linha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Badge */
+.badge-mais-vendido {
+    background-color: rgba(215, 229, 136, 1);
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Avaliações */
+.curso-avaliacoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nota {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.estrelas {
+    display: flex;
+    gap: 3px;
+}
+
+.estrelas img {
+    width: 18px;
+    height: auto;
+}
+
+/* Meia estrela */
+.meia-estrela-container {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.estrela-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.estrela-corte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.estrela-corte img {
+    width: 18px;
+    max-width: none;
+}
+
+.qtd-avaliacoes {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+}
+
+/* Criador */
+.curso-criador {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.criador-nome {
+    text-decoration: underline;
+}
+
+/* Idiomas */
+.curso-idiomas {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.idioma-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.idioma-item img {
+    width: 16px;
+    opacity: 0.75;
+}
+
+/* Card de compra (flutuante) */
+.curso-card-compra {
+  position: absolute;
+  top: 10px; 
+  right: 40px;
+  width: 380px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+/* Imagem do card */
+.card-img-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  background-color: #000;
+}
+
+.card-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-gigante {
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.play-gigante:hover {
+    transform: scale(1.1);
+}
+
+.card-conteudo {
+  padding: 25px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Preços */
+.card-precos {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.preco-atual {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: rgba(175, 27, 99, 1);
+  white-space: nowrap;
+}
+
+.preco-antigo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: line-through;
+  color: rgba(175, 27, 99, 0.51);
+}
+
+/* Urgência */
+.card-urgencia {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(246, 38, 139, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.card-urgencia b {
+    font-weight: 700;
+}
+
+.card-botoes-linha1 {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-add-carrinho {
+  flex-grow: 1;
+  height: 48px;
+  background-color: rgba(175, 27, 99, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-favorito {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid rgba(103, 16, 58, 1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-favorito img {
+    width: 20px;
+}
+
+.btn-comprar-agora {
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  color: rgba(103, 16, 58, 1);
+  border: 1px solid rgba(103, 16, 58, 1);
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-add-carrinho:hover,
+.btn-favorito:hover,
+.btn-comprar-agora:hover {
+    opacity: 0.8;
+}
+
+.garantia-texto {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-lista-inclusos {
+  text-align: left;
+}
+
+.card-lista-inclusos h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+}
+
+.card-lista-inclusos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-lista-inclusos li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  display: list-item;
+}
+
+/* CONTEÚDO DO CURSO */
+
+.curso-detalhes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 80px 0;
+  background-color: transparent;
+}
+
+.curso-detalhes-container {
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+}
+
+/* Texto principal */
+.curso-texto-principal {
+  width: 68%; 
+  padding-right: 40px;
+}
+
+/* Título seção */
+.titulo-secao {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.56;
+  letter-spacing: -0.03em;
+  color: rgba(101, 54, 84, 1);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  border-bottom: 2px solid rgba(101, 54, 84, 1);
+}
+
+/* Subtítulo */
+.subtitulo-secao {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.56;
+  letter-spacing: -0.03em;
+  text-align: justify;
+  color: rgba(103, 16, 58, 1);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.lista-secao {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.56;
+  letter-spacing: -0.03em;
+  text-align: justify;
+  color: rgba(103, 16, 58, 1);
+  margin-top: 0;
+  padding-left: 35px;
+}
+
+.lista-secao li {
+  margin-bottom: 1px;
+}
+
+/* DESCRIÇÃO E INSTRUTOR */
+
+/* Texto corrido */
+.texto-corrido p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.56;
+  letter-spacing: -0.03em;
+  text-align: justify;
+  color: rgba(103, 16, 58, 1);
+  margin-bottom: 20px;
+}
+
+.texto-corrido strong {
+  font-weight: 700;
+}
+
+/* Instrutor */
+.instrutor-perfil {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.instrutor-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instrutor-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.instrutor-nome {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  color: rgba(103, 16, 58, 1);
+}
+
+.instrutor-cargo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(103, 16, 58, 0.7);
+}
