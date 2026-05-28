@@ -1,7 +1,7 @@
 /* ==========================================================================
    IMPORTS & CONFIGURATION
    ========================================================================== */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 
 // --- Assets: Hero & Globals ---
@@ -82,13 +82,25 @@ const cursos = [
    MAIN COMPONENT
    ========================================================================== */
 function Home() {
-  // --- States ---
   const [showCookies, setShowCookies] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // --- Handlers ---
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 850);
+      setCurrentIndex(0);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxSlides = isMobile ? cursos.length - 1 : cursos.length - 3;
+  const tamanhoDoSalto = isMobile ? 394 : 390;
+
   const proximoSlide = () => {
-    if (currentIndex < cursos.length - 3) {
+    if (currentIndex < maxSlides) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -131,7 +143,6 @@ function Home() {
           <img src={heroGif} alt="Estudante acompanhando aula" className="hero-image" />
         </div>
 
-        {/* --- Cookie Banner --- */}
         {showCookies && (
           <div className="cookie-banner">
             <div className="cookie-content">
@@ -146,7 +157,6 @@ function Home() {
         )}
       </section>
 
-      {/* --- Section Divider --- */}
       <div className="divider-bar"></div>
 
       {/* ==========================================
@@ -169,7 +179,7 @@ function Home() {
             <div className="carousel-window">
               <div
                 className="cards-wrapper"
-                style={{ transform: `translateX(-${currentIndex * 390}px)` }}
+                style={{ transform: `translateX(-${currentIndex * tamanhoDoSalto}px)` }}
               >
                 {cursos.map((curso) => (
                   <div className="course-card" key={curso.id}>
@@ -209,10 +219,8 @@ function Home() {
 
         <div className="features-content">
 
-          {/* --- Left Column: Feature Cards --- */}
           <div className="features-list">
 
-            {/* Note a classe 'active' aqui para dar o destaque visual */}
             <div className="feature-card active">
               <img src={iconePc} alt="Treinamento prático" className="feature-icon" />
               <div className="feature-text">
@@ -247,7 +255,6 @@ function Home() {
 
           </div>
 
-          {/* --- Right Column: Mockup Window --- */}
           <div className="features-mockup">
             <div className="mockup-header">
               <div className="mockup-actions">
@@ -275,7 +282,6 @@ function Home() {
         </div>
       </section>
 
-      {/* --- Section Divider --- */}
       <div className="divider-bar divider-footer">MINDEMY</div>
 
       {/* ==========================================
@@ -283,16 +289,14 @@ function Home() {
           ========================================== */}
       <section className="testimonials-section">
         <div className="testimonials-container">
-          
-          {/* --- Header: Title & Line --- */}
+
           <div className="testimonials-header">
             <h2 className="testimonials-title">Veja o que outros alunos estão dizendo</h2>
             <div className="testimonials-line"></div>
           </div>
 
-          {/* --- Content: Testimonial Cards --- */}
           <div className="testimonials-content">
-            
+
             <div className="testimonial-card">
               <img src={iconeAspas} alt="Aspas" className="quote-icon" />
               <p className="testimonial-text">
