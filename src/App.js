@@ -2,12 +2,11 @@ import React from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import CursoWeb from './pages/CursoWeb';
+import Suporte from './pages/Suporte';
 
 function App() {
-  // Lê o que está escrito na URL do navegador
   const caminho = window.location.pathname;
 
-  // Renderiza a tela baseada na URL
   if (caminho === '/login') {
     return <Login />;
   }
@@ -16,7 +15,10 @@ function App() {
     return <CursoWeb />;
   }
 
-  // Se a URL for apenas '/' (ou qualquer outra coisa que não exista), mostra a Home
+  if (caminho === '/suporte') {
+    return <Suporte />;
+  }
+
   return <Home />;
 }
 

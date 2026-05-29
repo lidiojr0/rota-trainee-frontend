@@ -2,6 +2,8 @@
    IMPORTS & CONFIGURATION
    ========================================================================== */
 import React, { useState, useEffect } from 'react';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import './Home.css';
 
 // --- Assets: Hero & Globals ---
@@ -113,6 +115,7 @@ function Home() {
 
   return (
     <div className="home-container">
+      <NavBar />
 
       {/* ==========================================
           1. HERO SECTION
@@ -343,6 +346,7 @@ function Home() {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 }

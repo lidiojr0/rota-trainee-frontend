@@ -1,0 +1,136 @@
+/* === PAGE: SUPORTE === */
+
+.suporte-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(254, 233, 243, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* === CONTAINER === */
+.suporte-container {
+  max-width: 1350px;
+  width: 100%;
+  margin: 70px auto;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+/* === HERO / BUSCA === */
+.suporte-titulo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  color: rgba(103, 16, 58, 1);
+  margin-bottom: 20px;
+}
+
+.suporte-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(101, 54, 84, 0.5);
+  border-radius: 5px;
+  padding: 0 25px;
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+.suporte-search-icon {
+  width: 24px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.suporte-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+}
+
+.suporte-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.suporte-popular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: rgba(103, 16, 58, 1);
+}
+
+.suporte-popular strong {
+  font-weight: 700;
+}
+
+.suporte-popular-item {
+  color: rgba(103, 16, 58, 1);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+/* ==========================================================================
+   ASSUNTOS (CARDS)
+   ========================================================================== */
+.suporte-assuntos {
+  margin-top: 80px;
+}
+
+.assuntos-titulo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 156%;
+  letter-spacing: -0.03em;
+  color: rgba(103, 16, 58, 1);
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.assunto-card {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid rgba(101, 54, 84, 0.3);
+  border-radius: 8px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-icone {
+  height: 60px;
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.assunto-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.assunto-card li {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: rgba(103, 16, 58, 1);
+  margin-bottom: 3px;
+}
