@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import ChatButton from '../../components/ChatButton/ChatButton';
 import './Home.css';
 
 // --- Assets: Hero & Globals ---
@@ -348,6 +349,7 @@ function Home() {
         </div>
       </section>
 
+      <ChatButton />
       <Footer />
     </div>
   );

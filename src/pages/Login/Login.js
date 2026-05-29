@@ -1,22 +1,45 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ChatButton from '../../components/ChatButton/ChatButton';
 import './Login.css';
+
 import olhoImg from '../../assets/olho.svg';
 import logoImg from '../../assets/logo.svg';
+
+const formatarCPF = (valor) => {
+  let apenasNumeros = valor.replace(/\D/g, '');
+
+  if (apenasNumeros.length > 11) {
+    apenasNumeros = apenasNumeros.slice(0, 11);
+  }
+
+  apenasNumeros = apenasNumeros.replace(/(\d{3})(\d)/, '$1.$2');
+  apenasNumeros = apenasNumeros.replace(/(\d{3})(\d)/, '$1.$2');
+  apenasNumeros = apenasNumeros.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+  return apenasNumeros;
+};
 
 function Login() {
   const [authMode, setAuthMode] = useState('login');
   const [mostrarSenha, setMostrarSenha] = useState(false);
+  
+  const [cpf, setCpf] = useState('');
+
+  const handleMudancaCpf = (evento) => {
+    const valorDigitado = evento.target.value;
+    setCpf(formatarCPF(valorDigitado));
+  };
 
   return (
     <div className="auth-page">
-      
+
       {/* Header */}
       <div className="auth-header">
         <Link to="/">
           <img src={logoImg} alt="Mindemy Logo" className="auth-logo" />
         </Link>
-        <button 
+        <button
           className="toggle-auth-btn"
           onClick={() => setAuthMode(authMode === 'login' ? 'register' : 'login')}
         >
@@ -26,13 +49,13 @@ function Login() {
 
       {/* Main Content */}
       <div className="auth-container">
-        
+
         <h1 className="gradient-text">
           {authMode === 'login' && 'Login'}
           {authMode === 'register' && 'Invista no seu sucesso!'}
           {authMode === 'forgot' && 'Redefina sua senha'}
         </h1>
-        
+
         <p className="auth-subtitle">
           {authMode === 'login' && 'Digite o endereço de e-mail e a senha da sua conta Mindemy.'}
           {authMode === 'register' && 'Crie sua conta agora e tenha acesso a cursos exclusivos, desenvolvidos por especialistas, para você dominar as habilidades mais requisitadas do mercado. Invista no seu futuro e aprenda no seu ritmo, com conteúdo de qualidade e atualizado. Não perca tempo, o futuro da tecnologia espera por você!'}
@@ -41,7 +64,7 @@ function Login() {
 
         {/* Form */}
         <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
-          
+
           {authMode === 'register' && (
             <>
               <div className="input-group">
@@ -50,7 +73,13 @@ function Login() {
               </div>
               <div className="input-group">
                 <label>CPF</label>
-                <input type="text" />
+                <input 
+                  type="text" 
+                  value={cpf}
+                  onChange={handleMudancaCpf}
+                  maxLength="14"
+                  autoComplete="off"
+                />
               </div>
             </>
           )}
@@ -65,11 +94,11 @@ function Login() {
               <label>Senha</label>
               <div className="input-with-icon">
                 <input type={mostrarSenha ? "text" : "password"} />
-                <img 
-                  src={olhoImg} 
-                  alt="Mostrar/Esconder senha" 
+                <img
+                  src={olhoImg}
+                  alt="Mostrar/Esconder senha"
                   className="eye-icon"
-                  onClick={() => setMostrarSenha(!mostrarSenha)} 
+                  onClick={() => setMostrarSenha(!mostrarSenha)}
                 />
               </div>
             </div>
@@ -80,19 +109,19 @@ function Login() {
               <label>Confirmação de Senha</label>
               <div className="input-with-icon">
                 <input type={mostrarSenha ? "text" : "password"} />
-                <img 
-                  src={olhoImg} 
-                  alt="Mostrar/Esconder senha" 
+                <img
+                  src={olhoImg}
+                  alt="Mostrar/Esconder senha"
                   className="eye-icon"
-                  onClick={() => setMostrarSenha(!mostrarSenha)} 
+                  onClick={() => setMostrarSenha(!mostrarSenha)}
                 />
               </div>
             </div>
           )}
 
           {authMode === 'login' && (
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="forgot-password"
               onClick={(e) => {
                 e.preventDefault();
@@ -110,11 +139,11 @@ function Login() {
               {authMode === 'register' && 'Cadastrar'}
               {authMode === 'forgot' && 'Enviar'}
             </button>
-            
+
             {authMode !== 'login' && (
-              <button 
-                className="btn-cancel" 
-                type="button" 
+              <button
+                className="btn-cancel"
+                type="button"
                 onClick={() => setAuthMode('login')}
               >
                 Cancele
@@ -122,9 +151,9 @@ function Login() {
             )}
           </div>
         </form>
-        
-        {authMode === 'login' && <p className="auth-footer-text">Precisa de ajuda para entrar?</p>}
 
+        {authMode === 'login' && <p className="auth-footer-text">Precisa de ajuda para entrar?</p>}
+        <ChatButton />
       </div>
     </div>
   );

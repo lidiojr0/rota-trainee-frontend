@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import ChatButton from '../../components/ChatButton/ChatButton';
 import './CursoWeb.css';
 
 // Assets
@@ -18,11 +19,11 @@ import estrelaCinza from '../../assets/estrela-cinza.svg';
 
 
 function CursoWeb() {
-    return (
-        <div className="curso-page">
-            <NavBar />
+  return (
+    <div className="curso-page">
+      <NavBar />
 
-            {/* HERO */}
+      {/* HERO */}
       <section className="curso-hero">
         <div className="curso-hero-container">
           {/* Info */}
@@ -36,7 +37,7 @@ function CursoWeb() {
             {/* Avaliações */}
             <div className="curso-dados-linha">
               <span className="badge-mais-vendido">Mais Vendidos</span>
-              
+
               <div className="curso-avaliacoes">
                 <span className="nota">4.7</span>
                 <div className="estrelas">
@@ -97,9 +98,9 @@ function CursoWeb() {
                   <img src={favoritoImg} alt="Favoritar" />
                 </button>
               </div>
-              
+
               <button className="btn-comprar-agora">Comprar agora</button>
-              
+
               <p className="garantia-texto">Garantia de devolução do dinheiro em 30 dias</p>
 
               <div className="card-lista-inclusos">
@@ -118,17 +119,17 @@ function CursoWeb() {
         </div>
       </section>
 
-            {/* === SEÇÃO DE CONTEÚDO (Abaixo do Hero) === */}
+      {/* === SEÇÃO DE CONTEÚDO (Abaixo do Hero) === */}
       <section className="curso-detalhes">
         <div className="curso-detalhes-container">
-          
+
           {/* Conteúdo */}
           <div className="curso-texto-principal">
-            
+
             {/* Bloco 1 */}
             <div className="secao-texto">
               <h2 className="titulo-secao">O que você aprenderá?</h2>
-              
+
               <h3 className="subtitulo-secao">Front-End Dinâmico e Responsivo</h3>
               <ul className="lista-secao">
                 <li>Fundamentos de HTML, CSS e JavaScript para criar páginas incríveis.</li>
@@ -198,7 +199,7 @@ function CursoWeb() {
             {/* Bloco 4 */}
             <div className="secao-texto">
               <h2 className="titulo-secao">Instrutor</h2>
-              
+
               <div className="instrutor-perfil">
                 <img src={instrutorImg} alt="Alberto Romanhol" className="instrutor-foto" />
                 <div className="instrutor-dados">
@@ -216,9 +217,10 @@ function CursoWeb() {
         </div>
       </section>
 
-            <Footer />
-        </div>
-    );
+      <ChatButton />
+      <Footer />
+    </div>
+  );
 }
 
 export default CursoWeb;

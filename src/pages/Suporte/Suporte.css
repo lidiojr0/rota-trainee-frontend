@@ -161,15 +161,4 @@
   .assunto-card li {
     font-size: 15px;
   }
-
-  .btn-chat-flutuante {
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-  }
-
-  .btn-chat-flutuante img {
-    width: 30px;
-  }
 }

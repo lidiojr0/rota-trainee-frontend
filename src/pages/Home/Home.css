@@ -716,7 +716,7 @@ body,
 }
 
 /* Breakpoint para encolher a Home (Tablets e Celulares) */
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
 
   /* --- 1. HERO SECTION --- */
   .hero-section {
