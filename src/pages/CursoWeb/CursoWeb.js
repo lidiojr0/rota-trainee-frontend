@@ -1,20 +1,20 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import './CursoWeb.css';
 
 // Assets
-import cursoImg from '../assets/curso-web.jpg';
-import iconePlayCard from '../assets/icone-play.svg';
-import globoImg from '../assets/globo.svg';
-import legendaImg from '../assets/legenda.svg';
-import alarmeImg from '../assets/alarme.svg';
-import favoritoImg from '../assets/favorito.svg';
-import instrutorImg from '../assets/alberto.jpg';
+import cursoImg from '../../assets/curso-web.jpg';
+import iconePlayCard from '../../assets/icone-play.svg';
+import globoImg from '../../assets/globo.svg';
+import legendaImg from '../../assets/legenda.svg';
+import alarmeImg from '../../assets/alarme.svg';
+import favoritoImg from '../../assets/favorito.svg';
+import instrutorImg from '../../assets/alberto.jpg';
 
 // Estrelas
-import estrelaAmarela from '../assets/estrela.svg';
-import estrelaCinza from '../assets/estrela-cinza.svg';
+import estrelaAmarela from '../../assets/estrela.svg';
+import estrelaCinza from '../../assets/estrela-cinza.svg';
 
 
 function CursoWeb() {

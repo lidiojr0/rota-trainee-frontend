@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './NavBar.css';
 
 // --- Assets Desktop ---
-import logoImg from '../assets/logo.svg';
-import lupaImg from '../assets/lupa.svg';
-import carrinhoImg from '../assets/carrinho.svg';
-import perfilImg from '../assets/perfil.svg';
+import logoImg from '../../assets/logo.svg';
+import lupaImg from '../../assets/lupa.svg';
+import carrinhoImg from '../../assets/carrinho.svg';
+import perfilImg from '../../assets/perfil.svg';
 
 // --- Assets Mobile ---
-import logoMobileImg from '../assets/logo-mobile.svg';
-import menuIcon from '../assets/menu-sanduiche.svg';
-import carrinhoMobileImg from '../assets/carrinho-mobile.svg';
-import iconeX from '../assets/icone-x.svg';
+import logoMobileImg from '../../assets/logo-mobile.svg';
+import menuIcon from '../../assets/menu-sanduiche.svg';
+import carrinhoMobileImg from '../../assets/carrinho-mobile.svg';
+import iconeX from '../../assets/icone-x.svg';
 
 function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);

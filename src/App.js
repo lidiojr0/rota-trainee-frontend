@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import CursoWeb from './pages/CursoWeb';
-import Suporte from './pages/Suporte';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import CursoWeb from './pages/CursoWeb/CursoWeb';
+import Suporte from './pages/Suporte/Suporte';
 
 function App() {
   const caminho = window.location.pathname;

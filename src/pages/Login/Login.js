@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
-import olhoImg from '../assets/olho.svg';
-import logoImg from '../assets/logo.svg';
+import olhoImg from '../../assets/olho.svg';
+import logoImg from '../../assets/logo.svg';
 
 function Login() {
   const [authMode, setAuthMode] = useState('login');

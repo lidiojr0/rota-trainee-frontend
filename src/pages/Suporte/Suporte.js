@@ -1,16 +1,16 @@
 // === IMPORTS ===
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import ChatButton from '../components/ChatButton';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
+import ChatButton from '../../components/ChatButton/ChatButton';
 import './Suporte.css';
 
 // === ASSETS ===
-import searchIcon from '../assets/lupa.svg';
-import supportIcon from '../assets/perfil.svg';
-import cartIcon from '../assets/icone-carrinho.svg';
-import bookIcon from '../assets/livro.svg';
-import starIcon from '../assets/icone-estrela.svg';
+import searchIcon from '../../assets/lupa.svg';
+import supportIcon from '../../assets/perfil.svg';
+import cartIcon from '../../assets/icone-carrinho.svg';
+import bookIcon from '../../assets/livro.svg';
+import starIcon from '../../assets/icone-estrela.svg';
 
 function Suporte() {
   // === RENDER ===

@@ -2,42 +2,42 @@
    IMPORTS & CONFIGURATION
    ========================================================================== */
 import React, { useState, useEffect } from 'react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import './Home.css';
 
 // --- Assets: Hero & Globals ---
-import heroGif from '../assets/hero-animacao.gif';
-import searchIcon from '../assets/lupa.svg';
-import cookieIcon from '../assets/cookie.svg';
+import heroGif from '../../assets/hero-animacao.gif';
+import searchIcon from '../../assets/lupa.svg';
+import cookieIcon from '../../assets/cookie.svg';
 
 // --- Assets: Courses Carousel ---
-import iconePlay from '../assets/icone-play.svg';
-import setaEsquerda from '../assets/seta-esquerda.svg';
-import setaDireita from '../assets/seta-direita.svg';
-import setaPequena from '../assets/seta-pequena-direita.svg';
+import iconePlay from '../../assets/icone-play.svg';
+import setaEsquerda from '../../assets/seta-esquerda.svg';
+import setaDireita from '../../assets/seta-direita.svg';
+import setaPequena from '../../assets/seta-pequena-direita.svg';
 
 // --- Assets: Course Images ---
-import cursoWebImg from '../assets/curso-web.jpg';
-import cursoDadosImg from '../assets/curso-dados.jpg';
-import cursoDesignImg from '../assets/curso-design.jpg';
-import cursoMktImg from '../assets/curso-mkt.jpg';
-import cursoProjetosImg from '../assets/curso-projetos.jpg';
+import cursoWebImg from '../../assets/curso-web.jpg';
+import cursoDadosImg from '../../assets/curso-dados.jpg';
+import cursoDesignImg from '../../assets/curso-design.jpg';
+import cursoMktImg from '../../assets/curso-mkt.jpg';
+import cursoProjetosImg from '../../assets/curso-projetos.jpg';
 
 // --- Assets: Features Section ---
-import iconePc from '../assets/icone-pc.svg';
-import iconeCertificado from '../assets/icone-certificado.svg';
-import iconeGrafico from '../assets/icone-grafico.svg';
-import iconeAlvo from '../assets/icone-alvo.svg';
-import codigoImg from '../assets/codigo-img.png';
-import iconeMinimizar from '../assets/icone-minimizar.svg';
-import iconeFechar from '../assets/icone-fechar.svg';
+import iconePc from '../../assets/icone-pc.svg';
+import iconeCertificado from '../../assets/icone-certificado.svg';
+import iconeGrafico from '../../assets/icone-grafico.svg';
+import iconeAlvo from '../../assets/icone-alvo.svg';
+import codigoImg from '../../assets/codigo-img.png';
+import iconeMinimizar from '../../assets/icone-minimizar.svg';
+import iconeFechar from '../../assets/icone-fechar.svg';
 
 // --- Assets: Testimonials Section ---
-import iconeAspas from '../assets/icone-aspas.svg';
-import aluno1 from '../assets/aluno1.png';
-import aluno2 from '../assets/aluno2.png';
-import aluno3 from '../assets/aluno3.png';
+import iconeAspas from '../../assets/icone-aspas.svg';
+import aluno1 from '../../assets/aluno1.png';
+import aluno2 from '../../assets/aluno2.png';
+import aluno3 from '../../assets/aluno3.png';
 
 /* ==========================================================================
    DATA MOCKS

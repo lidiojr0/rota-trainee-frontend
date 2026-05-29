@@ -1,6 +1,6 @@
 import React from 'react';
 import './ChatButton.css';
-import chatIcon from '../assets/chat.svg';
+import chatIcon from '../../assets/chat.svg';
 
 function ChatButton() {
   return (

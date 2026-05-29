@@ -134,3 +134,42 @@
   color: rgba(103, 16, 58, 1);
   margin-bottom: 3px;
 }
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE - Suporte)
+   ========================================================================== */
+
+@media (max-width: 1160px) {
+
+  .suporte-container {
+    padding: 40px 20px;
+  }
+
+  .suporte-titulo {
+    font-size: 32px;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .assunto-card {
+    padding: 30px 20px;
+  }
+
+  .assunto-card li {
+    font-size: 15px;
+  }
+
+  .btn-chat-flutuante {
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .btn-chat-flutuante img {
+    width: 30px;
+  }
+}
