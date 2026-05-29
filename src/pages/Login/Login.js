@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import olhoImg from '../../assets/olho.svg';
 import logoImg from '../../assets/logo.svg';
@@ -12,7 +13,9 @@ function Login() {
       
       {/* Header */}
       <div className="auth-header">
-        <img src={logoImg} alt="Mindemy Logo" className="auth-logo" />
+        <Link to="/">
+          <img src={logoImg} alt="Mindemy Logo" className="auth-logo" />
+        </Link>
         <button 
           className="toggle-auth-btn"
           onClick={() => setAuthMode(authMode === 'login' ? 'register' : 'login')}

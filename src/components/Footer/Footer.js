@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logoFooterImg from '../../assets/logo-footer.svg';
 
@@ -10,11 +11,11 @@ function Footer() {
 
         <div className="footer-bottom">
           <div className="footer-links">
-            <a href="#">Mindemy</a>
-            <a href="#">Ensine na Mindemy</a>
-            <a href="#">Baixe o aplicativo</a>
-            <a href="#">Quem somos</a>
-            <a href="#">Fale conosco</a>
+            <Link to="/">Mindemy</Link>
+            <Link to="#">Ensine na Mindemy</Link>
+            <Link to="#">Baixe o aplicativo</Link>
+            <Link to="#">Quem somos</Link>
+            <Link to="/suporte">Fale conosco</Link>
           </div>
 
           <div className="footer-logo">

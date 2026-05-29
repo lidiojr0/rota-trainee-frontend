@@ -2,6 +2,7 @@
    IMPORTS & CONFIGURATION
    ========================================================================== */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import './Home.css';
@@ -48,7 +49,8 @@ const cursos = [
     titulo: 'Desenvolvimento Web',
     descricao: 'Aprenda a criar sites e aplicativos modernos com as principais tecnologias do mercado. Domine HTML, CSS, JavaScript e frameworks como React e Vue.js.',
     link: 'Ver Curso de Desenvolvimento Web',
-    imagem: cursoWebImg
+    imagem: cursoWebImg,
+    path: '/curso'
   },
   {
     id: 2,
@@ -195,9 +197,9 @@ function Home() {
                     <div className="course-info">
                       <h4>{curso.titulo}</h4>
                       <p>{curso.descricao}</p>
-                      <a href="#" className="course-link">
+                      <Link to={curso.path || '#'} className="course-link">
                         {curso.link} <img src={setaPequena} alt="Seta" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
