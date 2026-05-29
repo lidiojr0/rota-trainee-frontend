@@ -22,6 +22,13 @@ Este projeto consiste em uma aplicação web responsiva construída com **React*
 
 Para garantir a consistência e a correta execução do projeto em qualquer ambiente, utilize as seguintes tecnologias e dependências:
 
+## 🟢 Ambiente de Execução
+
+| Tecnologia | Versão |
+|------------|---------|
+| **Node.js** | `v22.21.0` |
+
+
 ## 📦 Core da Aplicação
 
 | Tecnologia / Biblioteca | Versão    | Descrição                                         |
